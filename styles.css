@@ -295,3 +295,163 @@ body.collapsed h2{
 }
 
 /* sidebar action */
+
+.sidebar-action-container{
+    /* overflow-x: hidden; */
+    margin: 0 16px;
+    margin-top: auto;
+}
+
+.sidebar-action{
+    padding: 16px;
+    background-color: var(--cta-background);
+    border-radius: 16px;
+    min-width: 16rem;
+    color: var(--cta-text);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.sidebar-action h2{
+    margin-bottom: 8px;
+}
+
+.sidebar-action p{
+    margin-bottom: 12px;
+    margin-top: 8px;
+    color: var(--text);
+}
+
+.sidebar-action button{
+    border: 0px;
+    margin-top: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    height: 42px;
+    font-size: 18px;
+    color: var(--neutral);
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--sidebar-primary) -0.38%, var(--sidebar-primary-light) 100.02%);
+}
+
+.sidebar-action .progress-bar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: larger;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(closest-side, var(--cta-background) 79%, transparent 80% 100%), conic-gradient(var(--sidebar-primary)60%, var(--cta-background-darker) 0);
+    margin-bottom: 16px;
+}
+
+.body.collapsed .sidebar-action{
+    display: none;
+}
+
+/* profile part/section */
+
+.sidebar-profile{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-direction: row;
+    padding: 0 16px;
+    color: var(--text-link);
+    overflow-x: hidden;
+    min-height: 42px;
+}
+
+.avatar-container{
+    position: relative;
+    display: flex;
+}
+
+.avatar{
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.avatar-name{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    white-space: nowrap;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.username{
+    font-weight: 600;
+    text-align: left;
+    color: var(--text);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.email{
+    color: var(--text-lighter);
+    font-size: 13px;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.logout{
+    animation: fadeIn 0.2s ease-in-out;
+    margin-left: auto;
+}
+
+.logout svg{
+    color: var(--logout);
+}
+
+.body.collapsed .logout{
+    display: none;
+}
+
+/* expand button */
+
+.expand-button{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    right: -16px;
+    border: 1px solid var(--cta-background-border);
+    background-color: var(--background);
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+}
+
+.expand-button svg{
+    transform: rotate(-180deg);
+    stroke: var(--expand-button);
+    width: 20px;
+    height: 20px;
+}
+
+.body.collapsed .expand-button svg{
+    transform: rotate(-360deg);
+}
+
+.bottom-links{
+    margin-top: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        width: 0px;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
