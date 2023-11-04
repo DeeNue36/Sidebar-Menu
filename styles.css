@@ -50,7 +50,7 @@ html{
     color: var(--text);
     flex-direction: column;
     background-color: var(--sidebar-background);
-    transition: max-width 0.1s ease-in-out;
+    transition: max-width 0.5s ease-in-out;
 }
 
 body.collapsed .sidebar{
@@ -223,7 +223,7 @@ body.collapsed .sidebar-links li{
     justify-content: center;
     height: 56px;
     text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .sidebar-links li a .link{
